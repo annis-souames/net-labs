@@ -1,0 +1,13 @@
+name: leaf-spine-basic
+
+topology:
+  nodes:
+    spine1:
+      kind: linux
+      image: frrouting/frr
+    spine2:
+      kind: linux
+      image: frrouting/frr
+
+  links:
+    - endpoints: ["spine1:eth1", "leaf1:eth1"]
